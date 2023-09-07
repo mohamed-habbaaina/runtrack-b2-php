@@ -25,7 +25,7 @@ function find_all_students() : array
     $que = "SELECT * FROM `student`";
     $dataAllStudents = getDb()->prepare($que);
     $dataAllStudents->execute();
-    return $dataAllStudents->fetchAll(\PDO::FETCH_ASSOC);
+    return $dataAllStudents->fetchAll(PDO::FETCH_ASSOC);
 
 }
 // var_dump(find_all_students());
@@ -43,6 +43,7 @@ function find_all_students() : array
     <thead>
         <th>ID</th>
         <th>GRADE_ID</th>
+        <th>EMAIL</th>
         <th>FULL NAME</th>
         <th>BIRTHDATE</th>
         <th>GENDER</th>
